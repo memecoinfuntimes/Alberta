@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { business, payments } from '../../data/site';
+---
+
+<Base
+  title="Pay Your Invoice"
+  description="Pay your Alberta Construction LLC invoice by card, Apple Pay, Google Pay, Zelle, cash, or check."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Payments</p>
+      <h1>Pay your invoice</h1>
+      <p class="lede">
+        Quick and easy. Pay online with a card, or use Zelle, cash, or check. Questions about your invoice? Call{' '}
+        <a href={business.phoneHref}>{business.phone}</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="pay-grid">
+        <div class="pay-card primary">
+          <span class="service-icon"><Icon name="credit-card" size={28} /></span>
+          <h2 class="category-title" style="border: 0; padding: 0; margin: 0">Pay online</h2>
+          <p>Card, Apple Pay, or Google Pay. Tap the “Pay now” link in your invoice text or email, or use the button below.</p>
+          {
+            payments.squarePayUrl ? (
+              <a class="btn btn-primary btn-block" href={payments.squarePayUrl} rel="noopener">
+                Pay Online <Icon name="arrow-right" size={18} />
+              </a>
+            ) : (
+              <span class="coming-soon">Online card payments coming soon</span>
+            )
+          }
+        </div>
+
+        <div class="pay-card">
+          <span class="service-icon"><Icon name="smartphone" size={28} /></span>
+          <h2 class="category-title" style="border: 0; padding: 0; margin: 0">Zelle</h2>
+          <p>Send payment from your bank app with no fees. Include your name and invoice number in the memo.</p>
+          {
+            payments.zelle ? (
+              <span class="pay-detail">{payments.zelle}</span>
+            ) : (
+              <span class="coming-soon">Zelle details coming soon</span>
+            )
+          }
+        </div>
+
+        <div class="pay-card">
+          <span class="service-icon"><Icon name="banknote" size={28} /></span>
+          <h2 class="category-title" style="border: 0; padding: 0; margin: 0">Cash or check</h2>
+          <p>Pay in person when the job is done. Make checks payable to:</p>
+          <span class="pay-detail">{payments.checkPayableTo}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import { business, pricing } from '../../data/site';
+---
+
+<Base
+  title="Get a Free Quote"
+  description={`Request a free handyman quote in Portland, OR. Same-business-day replies. Call ${business.phone} or send your project details online.`}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Free Quote</p>
+      <h1>Tell me about your project</h1>
+      <p class="lede">Fill this out and I’ll get back to you the same business day with next steps and a price.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <QuoteForm variant="full" />
+
+      <aside class="aside-card">
+        <h2>Prefer to talk?</h2>
+        <p>Phone quotes are welcome. Call or text {business.hours}.</p>
+        <div class="btn-group" style="margin-block: 20px 28px">
+          <a class="btn btn-primary btn-block" href={business.phoneHref}><Icon name="phone" size={18} /> Call {business.phone}</a>
+          <a class="btn btn-outline btn-block" href={business.smsHref}><Icon name="message-circle" size={18} /> Send a Text</a>
+        </div>
+        <h2>What to expect</h2>
+        <ul class="check-list">
+          <li><Icon name="check" size={20} /> A reply the same business day</li>
+          <li><Icon name="check" size={20} /> {pricing.range}, {pricing.minimum} minimum per visit</li>
+          <li><Icon name="check" size={20} /> Free written estimate on bigger jobs</li>
+          <li><Icon name="check" size={20} /> Licensed &amp; insured, CCB #{business.ccb}</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</Base>

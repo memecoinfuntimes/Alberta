@@ -1,0 +1,23 @@
+---
+// Renders nothing until photos are added in src/data/site.ts.
+import SectionHead from './SectionHead.astro';
+import { workPhotos } from '../data/site';
+---
+
+{
+  workPhotos.length > 0 && (
+    <section class="section" aria-labelledby="work-title">
+      <div class="container">
+        <SectionHead id="work-title" eyebrow="Our Work" title="Recent projects" />
+        <div class="work-grid">
+          {workPhotos.map((p) => (
+            <figure>
+              <img src={p.src} alt={p.alt} loading="lazy" decoding="async" />
+              {p.caption && <figcaption>{p.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

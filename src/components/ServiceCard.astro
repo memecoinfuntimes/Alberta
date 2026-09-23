@@ -1,0 +1,17 @@
+---
+import Icon from './Icon.astro';
+import type { Service } from '../data/site';
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+---
+
+<a class="service-card" href={`/quote/?service=${service.slug}`}>
+  <span class="service-icon"><Icon name={service.icon} size={28} /></span>
+  <h3>{service.name}</h3>
+  <p>{service.blurb}</p>
+  <span class="card-link">Get a quote <Icon name="arrow-right" size={16} /></span>
+</a>

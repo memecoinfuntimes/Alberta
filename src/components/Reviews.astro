@@ -1,0 +1,25 @@
+---
+// Renders nothing until reviews are added in src/data/site.ts.
+import SectionHead from './SectionHead.astro';
+import { reviews } from '../data/site';
+---
+
+{
+  reviews.length > 0 && (
+    <section class="section section-gray" aria-labelledby="reviews-title">
+      <div class="container">
+        <SectionHead id="reviews-title" eyebrow="Reviews" title="What neighbors are saying" center />
+        <div class="review-grid">
+          {reviews.map((r) => (
+            <figure class="review">
+              <blockquote>“{r.quote}”</blockquote>
+              <figcaption>
+                {r.name}, {r.area}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

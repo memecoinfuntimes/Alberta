@@ -1,0 +1,152 @@
+---
+// Quote request form, handled by Netlify Forms. Submissions are emailed to the
+// owner once form notifications are turned on in the Netlify dashboard.
+import { allServices, business } from '../data/site';
+
+interface Props {
+  variant?: 'compact' | 'full';
+}
+
+const { variant = 'full' } = Astro.props;
+const compact = variant === 'compact';
+const formName = compact ? 'quick-quote' : 'quote';
+const id = (field: string) => `${formName}-${field}`;
+---
+
+<form
+  class:list={['quote-form', { compact }]}
+  name={formName}
+  method="POST"
+  action="/thanks/"
+  data-netlify="true"
+  netlify-honeypot="company"
+  enctype={compact ? undefined : 'multipart/form-data'}
+>
+  <input type="hidden" name="form-name" value={formName} />
+  <p class="visually-hidden">
+    <label>Leave this empty: <input name="company" tabindex="-1" autocomplete="off" /></label>
+  </p>
+
+  <div class="field">
+    <label for={id('name')}>Name</label>
+    <input id={id('name')} name="name" type="text" autocomplete="name" required />
+  </div>
+
+  <div class:list={['field-row', { stack: compact }]}>
+    <div class="field">
+      <label for={id('phone')}>Phone</label>
+      <input id={id('phone')} name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+    </div>
+    {
+      !compact && (
+        <div class="field">
+          <label for={id('email')}>Email</label>
+          <input id={id('email')} name="email" type="email" autocomplete="email" required />
+        </div>
+      )
+    }
+  </div>
+
+  {
+    !compact && (
+      <div class="field">
+        <label for={id('location')}>Neighborhood or city</label>
+        <input
+          id={id('location')}
+          name="location"
+          type="text"
+          autocomplete="address-level2"
+          placeholder="e.g. Kenton, Beaverton, Milwaukie"
+          required
+        />
+      </div>
+    )
+  }
+
+  <div class="field">
+    <label for={id('service')}>Service needed</label>
+    <select id={id('service')} name="service" required data-service-select>
+      <option value="">Choose a service…</option>
+      {allServices.map((s) => <option value={s.name} data-slug={s.slug}>{s.name}</option>)}
+      <option value="Other" data-slug="other">Other / not sure</option>
+    </select>
+  </div>
+
+  {
+    compact ? (
+      <div class="field">
+        <label for={id('details')}>
+          Quick description <span class="optional">(optional)</span>
+        </label>
+        <input id={id('details')} name="details" type="text" placeholder="e.g. 3 fence posts leaning" />
+      </div>
+    ) : (
+      <>
+        <div class="field">
+          <label for={id('details')}>Tell me about the project</label>
+          <textarea
+            id={id('details')}
+            name="details"
+            rows="5"
+            placeholder="What needs doing, rough size, anything I should know."
+            required
+          />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for={id('timeline')}>
+              Timeline <span class="optional">(optional)</span>
+            </label>
+            <select id={id('timeline')} name="timeline">
+              <option value="">Select…</option>
+              <option>As soon as possible</option>
+              <option>Within 2 weeks</option>
+              <option>Within a month</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+          <fieldset class="field">
+            <legend>
+              Best way to reach you <span class="optional">(optional)</span>
+            </legend>
+            <div class="radio-row">
+              <label><input type="radio" name="contact-method" value="Call" /> Call</label>
+              <label><input type="radio" name="contact-method" value="Text" /> Text</label>
+              <label><input type="radio" name="contact-method" value="Email" /> Email</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <label for={id('photo')}>
+            Photo of the project <span class="optional">(optional)</span>
+          </label>
+          <input id={id('photo')} name="photo" type="file" accept="image/*" />
+          <p class="hint">
+            Have more photos? Text them to <a href={business.smsHref}>{business.phone}</a>.
+          </p>
+        </div>
+      </>
+    )
+  }
+
+  <button class="btn btn-primary btn-block" type="submit">
+    {compact ? 'Get My Free Quote' : 'Send Quote Request'}
+  </button>
+  <p class="form-note">
+    You'll hear back the same business day. Prefer to talk?{' '}
+    <a href={business.phoneHref}>Call {business.phone}</a>
+  </p>
+</form>
+
+<script>
+  // Pre-select the service when arriving from a service card (?service=slug).
+  const slug = new URLSearchParams(window.location.search).get('service');
+  if (slug) {
+    document.querySelectorAll<HTMLSelectElement>('[data-service-select]').forEach((select) => {
+      const option = select.querySelector<HTMLOptionElement>(`option[data-slug="${CSS.escape(slug)}"]`);
+      if (option) select.value = option.value;
+    });
+  }
+</script>

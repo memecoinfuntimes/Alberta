@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { business } from '../../data/site';
+---
+
+<Base
+  title="About Bill"
+  description={`Meet Bill, owner of Alberta Construction LLC. ${business.yearsExperience} years of honest, dependable handyman work in North Portland. Licensed & insured, CCB #${business.ccb}.`}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h1>Honest work from a neighbor</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="prose">
+        <p class="greeting">Hi, I’m {business.owner}.</p>
+        <p>
+          I’m a dad, part of a family of four, and I’ve been fixing, building, and finishing projects for more than
+          30 years. Alberta Construction is named after Alberta Street, where my family lives, so when I work in
+          your home, I’m working for a neighbor.
+        </p>
+        <p>
+          I started this business because too many people have been let down by contractors. You don’t know when
+          they’re showing up, you don’t know what the bill will be, and you’re never sure anyone’s really on top of
+          it. I do it differently:
+        </p>
+        <ul>
+          <li>
+            <strong>You’ll know what’s happening.</strong> I answer my phone, return calls and texts, and keep you
+            updated from the first visit to the final walkthrough.
+          </li>
+          <li>
+            <strong>You’ll know what it costs.</strong> My rates are right here on the website. Bigger jobs get a
+            written price before I start. No hidden costs, ever.
+          </li>
+          <li>
+            <strong>I show up, and I finish.</strong> When I say I’ll be there, I’m there. Jobs get done completely
+            and on time.
+          </li>
+          <li>
+            <strong>I leave it clean.</strong> I treat your home like it’s my own and clean up before I go.
+          </li>
+        </ul>
+        <p>
+          I’m licensed and insured (Oregon CCB #{business.ccb}), and I’d be glad to help with your next project, big
+          or small. Give me a call at <a href={business.phoneHref}>{business.phone}</a>.
+        </p>
+      </div>
+
+      <aside>
+        {
+          business.ownerPhoto && (
+            <img class="owner-photo" src={business.ownerPhoto} alt={`${business.owner}, owner of ${business.name}`} />
+          )
+        }
+        <div class="aside-card">
+          <h2>At a glance</h2>
+          <ul class="check-list">
+            <li><Icon name="check" size={20} /> {business.yearsExperience} years of experience</li>
+            <li><Icon name="check" size={20} /> Licensed &amp; insured, Oregon CCB #{business.ccb}</li>
+            <li><Icon name="check" size={20} /> Based on Alberta Street, North Portland</li>
+            <li><Icon name="check" size={20} /> Serving the Greater Portland metro (Oregon)</li>
+            <li><Icon name="check" size={20} /> {business.hours}</li>
+            <li><Icon name="check" size={20} /> Same-business-day replies</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBand title="Let's talk about your project" />
+</Base>

@@ -1,0 +1,191 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource/libre-caslon-text/400.css';
+import '@fontsource/libre-caslon-text/700.css';
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { business, serviceArea } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const fullTitle = title.includes(business.shortName) ? title : `${title} | ${business.name}`;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: '/services/', label: 'Services' },
+  { href: '/about/', label: 'About' },
+  { href: '/pay/', label: 'Pay Invoice' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: business.name,
+  description,
+  telephone: '+1-971-409-6661',
+  email: business.email,
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: business.city,
+    addressRegion: business.region,
+    postalCode: business.postalCode,
+    addressCountry: 'US',
+  },
+  areaServed: [
+    'Portland, OR',
+    ...serviceArea
+      .filter((a) => a.region !== 'Portland')
+      .flatMap((a) => a.places.split(', ').map((p) => `${p}, OR`)),
+  ],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '17:00',
+  },
+  ...(Astro.site ? { url: Astro.site.href } : {}),
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta name="theme-color" content="#1f1f1f" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <ul class="topbar-list">
+          <li><Icon name="map-pin" size={14} /> {business.locality}, OR</li>
+          <li class="hide-sm"><Icon name="clock" size={14} /> {business.hoursShort}</li>
+          <li class="hide-sm"><Icon name="shield-check" size={14} /> Licensed &amp; Insured · CCB #{business.ccb}</li>
+        </ul>
+        <a class="topbar-phone" href={business.phoneHref}><Icon name="phone" size={14} /> {business.phone}</a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/" aria-label={`${business.name}, home`}>
+          <span class="logo-main">Alberta Construction</span>
+          <span class="logo-sub">LLC · Handyman Services</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main">
+          <ul>
+            {
+              nav.map((item) => (
+                <li>
+                  <a href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a class="header-phone" href={business.phoneHref}>
+            <Icon name="phone" size={18} />
+            <span>{business.phone}</span>
+          </a>
+          <a class="btn btn-primary" href="/quote/">Get a Free Quote</a>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="visually-hidden">Menu</span>
+          <span class="menu-open"><Icon name="menu" size={26} /></span>
+          <span class="menu-close"><Icon name="x" size={26} /></span>
+        </button>
+      </div>
+
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
+        <ul>
+          <li><a href="/">Home</a></li>
+          {nav.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+          <li><a href="/quote/">Get a Free Quote</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="logo logo-footer">
+            <span class="logo-main">Alberta Construction</span>
+            <span class="logo-sub">LLC · Handyman Services</span>
+          </p>
+          <p class="footer-text">
+            Honest, dependable handyman work from your neighbor on Alberta Street. {business.yearsExperience} years
+            of experience.
+          </p>
+          <p class="footer-badge"><Icon name="shield-check" size={18} /> Licensed &amp; Insured · Oregon CCB #{business.ccb}</p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Contact</h2>
+          <ul class="footer-list">
+            <li><a href={business.phoneHref}><Icon name="phone" size={16} /> {business.phone}</a></li>
+            <li><a href={`mailto:${business.email}`}><Icon name="mail" size={16} /> {business.email}</a></li>
+            <li><Icon name="clock" size={16} /> {business.hours}</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Service Area</h2>
+          <p class="footer-text">
+            Based in {business.locality}, OR {business.postalCode}. Serving the Greater Portland metro, Oregon side.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-list">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/quote/">Get a Free Quote</a></li>
+            <li><a href="/pay/">Pay Your Invoice</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="mobile-cta" role="navigation" aria-label="Quick contact">
+      <a class="btn btn-dark" href={business.phoneHref}><Icon name="phone" size={18} /> Call</a>
+      <a class="btn btn-primary" href="/quote/">Free Quote</a>
+    </div>
+
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const menu = document.getElementById('mobile-nav');
+      toggle?.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        if (menu) menu.hidden = open;
+      });
+    </script>
+  </body>
+</html>

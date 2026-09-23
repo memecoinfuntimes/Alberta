@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHead from '../../components/SectionHead.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { business, pricing, serviceCategories } from '../../data/site';
+---
+
+<Base
+  title="Handyman Services in Portland, OR"
+  description={`Fence installation and repair, deck repair, interior painting, grab bars, sheds, chicken coops, raised beds, clean-ups and more in Portland, OR. Licensed & insured, CCB #${business.ccb}.`}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Services</p>
+      <h1>Handyman services</h1>
+      <p class="lede">
+        {business.yearsExperience} years of experience across fences, decks, painting, and all the small jobs in
+        between. {pricing.range}, {pricing.minimum} minimum, and free written estimates on bigger projects.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {
+        serviceCategories.map((category) => (
+          <div class="category">
+            <h2 class="category-title">{category.name}</h2>
+            <div class="service-grid">
+              {category.services.map((service) => (
+                <ServiceCard service={service} />
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section section-gray" aria-labelledby="other-title">
+    <div class="container">
+      <SectionHead
+        id="other-title"
+        eyebrow="Don't See It?"
+        title="Just ask"
+        intro="If it's a repair, a build, or a project around the house, there's a good chance I can help. Send a quick description and I'll tell you straight whether it's a fit."
+      />
+      <a class="btn btn-primary" href="/quote/?service=other">Describe Your Project</a>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>

@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { business } from '../../data/site';
+---
+
+<Base title="Thanks!" description="Your quote request was sent to Alberta Construction LLC.">
+  <section class="section">
+    <div class="container" style="max-width: 760px; text-align: center">
+      <span class="service-icon" style="margin-inline: auto"><Icon name="check" size={28} /></span>
+      <h1>Thanks! Got it.</h1>
+      <p class="lede">
+        Your request is in. I’ll get back to you the same business day ({business.hours}). Need me sooner? Call{' '}
+        <a href={business.phoneHref}>{business.phone}</a>.
+      </p>
+      <div class="btn-group" style="justify-content: center; margin-top: 32px">
+        <a class="btn btn-outline" href="/">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</Base>

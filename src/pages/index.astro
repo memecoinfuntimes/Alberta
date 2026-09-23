@@ -1,0 +1,271 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import SectionHead from '../components/SectionHead.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import Faq from '../components/Faq.astro';
+import Reviews from '../components/Reviews.astro';
+import WorkGallery from '../components/WorkGallery.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { allServices, business, featuredServiceSlugs, pricing, serviceArea } from '../data/site';
+
+const featured = featuredServiceSlugs
+  .map((slug) => allServices.find((s) => s.slug === slug))
+  .filter((s) => s !== undefined);
+
+const worries = [
+  {
+    q: '“I never know what’s going on.”',
+    title: 'You’ll always know.',
+    text: 'I pick up the phone and return calls and texts the same business day. You’ll know when I’m coming, what I’m doing, and when it’ll be done.',
+  },
+  {
+    q: '“I don’t know what it’s going to cost.”',
+    title: 'No hidden costs.',
+    text: 'My rates are posted right here. Bigger jobs get a written price before any work starts, so the bill never surprises you.',
+  },
+  {
+    q: '“Are they actually on top of it?”',
+    title: 'Show up. Get it done.',
+    text: `${business.yearsExperience} years of experience. I show up on time, finish when I said I would, and clean up before I leave.`,
+  },
+];
+
+const why = [
+  {
+    icon: 'message-circle',
+    title: 'Clear communication',
+    text: 'Same-day replies and updates as the job moves along. No chasing me down.',
+  },
+  {
+    icon: 'badge-dollar-sign',
+    title: 'Upfront pricing',
+    text: 'Posted rates and written prices on bigger jobs. What we agree on is what you pay.',
+  },
+  {
+    icon: 'calendar-check',
+    title: 'Dependable',
+    text: 'On time, every time. Projects are finished completely and when promised.',
+  },
+  {
+    icon: 'sparkles',
+    title: 'Neat & tidy',
+    text: 'I treat your home like my own and leave the work area clean.',
+  },
+];
+
+const steps = [
+  {
+    title: 'Reach out',
+    text: `Call ${business.phone} or send a quote request. You’ll hear back the same business day.`,
+  },
+  {
+    title: 'Know the price',
+    text: 'We talk through the job and you get a clear price up front, in writing for bigger projects. No surprises.',
+  },
+  {
+    title: 'Stay in the loop',
+    text: 'I show up when I say I will, and you’ll know what’s happening each step of the way.',
+  },
+  {
+    title: 'Done right, cleaned up',
+    text: 'The job gets finished on time, the area gets cleaned, and you pay easily by card, Zelle, cash, or check.',
+  },
+];
+---
+
+<Base
+  title="Handyman in North Portland, OR | Alberta Construction LLC"
+  description={`Honest, dependable handyman services in Portland, OR. Fences, decks, painting, grab bars, sheds, clean-ups and more. ${business.yearsExperience} years of experience. Licensed & insured, CCB #${business.ccb}.`}
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">North Portland Handyman</p>
+        <h1>Honest handyman work. <span>Done right.</span></h1>
+        <p class="hero-sub">
+          You’ll know what’s happening, what it costs, and when it’ll be done. Fences, decks, painting, repairs
+          and more across the Greater Portland area.
+        </p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href={business.phoneHref}><Icon name="phone" size={18} /> Call {business.phone}</a>
+          <a class="btn btn-outline" href="/services/">See Services</a>
+        </div>
+        <ul class="trust-line">
+          <li><Icon name="clock" size={18} /> {business.yearsExperience} Years Experience</li>
+          <li><Icon name="shield-check" size={18} /> Licensed &amp; Insured</li>
+          <li><Icon name="clipboard-list" size={18} /> CCB #{business.ccb}</li>
+          <li><Icon name="badge-dollar-sign" size={18} /> No Hidden Costs</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h2>Get a free quote</h2>
+        <p>Tell me what you need. I’ll get back to you the same business day.</p>
+        <QuoteForm variant="compact" />
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="At a glance">
+    <div class="container">
+      <ul class="stats-grid">
+        <li><span class="stat-label">Experience</span><span class="stat-value">{business.yearsExperience} Years</span></li>
+        <li><span class="stat-label">Services</span><span class="stat-value">{allServices.length}</span></li>
+        <li><span class="stat-label">Reply time</span><span class="stat-value">Same Day</span></li>
+        <li><span class="stat-label">Oregon CCB</span><span class="stat-value">#{business.ccb}</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-gray" aria-labelledby="worries-title">
+    <div class="container">
+      <SectionHead
+        id="worries-title"
+        eyebrow="The Alberta Difference"
+        title="Handyman work without the headaches"
+        intro="Most people have been burned by a contractor at least once. Here’s how I make sure it doesn’t happen with me."
+      />
+      <div class="worries">
+        {
+          worries.map((w) => (
+            <div class="worry">
+              <p class="worry-q">{w.q}</p>
+              <h3>{w.title}</h3>
+              <p>{w.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="services-title">
+    <div class="container">
+      <SectionHead
+        id="services-title"
+        eyebrow="Services"
+        title="What can I help with?"
+        intro="From fence repairs to furniture assembly, no job is too small. Here are the most popular. See all 14 services for the full list."
+      />
+      <div class="service-grid">
+        {featured.map((service) => <ServiceCard service={service} />)}
+      </div>
+      <div class="section-cta">
+        <a class="btn btn-outline" href="/services/">See All {allServices.length} Services <Icon name="arrow-right" size={18} /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" aria-labelledby="why-title">
+    <div class="container">
+      <SectionHead id="why-title" eyebrow="Why Alberta Construction" title="A handyman you can count on" />
+      <ul class="why-grid">
+        {
+          why.map((item) => (
+            <li>
+              <Icon name={item.icon} size={32} />
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="steps-title">
+    <div class="container steps-layout">
+      <SectionHead
+        id="steps-title"
+        eyebrow="How It Works"
+        title="Simple from first call to final walkthrough"
+        intro="No guessing, no chasing. Here’s exactly what to expect."
+      />
+      <ol class="steps">
+        {
+          steps.map((step, i) => (
+            <li>
+              <span class="step-num">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <WorkGallery />
+
+  <section class="section section-dark" aria-labelledby="pricing-title">
+    <div class="container pricing-band">
+      <div>
+        <p class="eyebrow">Honest Pricing</p>
+        <h2 id="pricing-title">Know the cost before I start</h2>
+        <span class="price-big">$75–$150 <small>/ hour</small></span>
+      </div>
+      <ul class="price-points">
+        <li>
+          <Icon name="check" size={22} />
+          <div>
+            <strong>Rate depends on the job</strong>
+            <span>Most work falls between {pricing.range} depending on the type of work.</span>
+          </div>
+        </li>
+        <li>
+          <Icon name="check" size={22} />
+          <div>
+            <strong>{pricing.minimum} minimum per visit</strong>
+            <span>Posted up front so there are no surprises.</span>
+          </div>
+        </li>
+        <li>
+          <Icon name="check" size={22} />
+          <div>
+            <strong>Free written estimates on bigger jobs</strong>
+            <span>Fences, decks, sheds and larger projects get a set price before work starts.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <Reviews />
+
+  <section class="section" aria-labelledby="area-title">
+    <div class="container area-layout">
+      <SectionHead
+        id="area-title"
+        eyebrow="Service Area"
+        title="Your neighbor on Alberta Street"
+        intro={`Based in ${business.locality} (${business.postalCode}) and working across the Greater Portland metro on the Oregon side.`}
+      />
+      <div>
+        <ul class="area-list">
+          {
+            serviceArea.map((a) => (
+              <li>
+                <strong>{a.region}</strong>
+                <span>{a.places}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="area-note">Not sure if you’re in the area? Just ask. Oregon side of the metro only.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-gray" aria-labelledby="faq-title">
+    <div class="container">
+      <SectionHead id="faq-title" eyebrow="FAQ" title="Common questions" center />
+      <Faq />
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>

@@ -1,0 +1,22 @@
+---
+// Inlines a Lucide icon (https://lucide.dev/icons) at build time.
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 24, class: className } = Astro.props;
+const file = path.join(process.cwd(), 'node_modules/lucide-static/icons', `${name}.svg`);
+const svg = fs
+  .readFileSync(file, 'utf8')
+  .replace(/<!--.*?-->\s*/s, '')
+  .replace(/width="24"/, `width="${size}"`)
+  .replace(/height="24"/, `height="${size}"`)
+  .replace(/class="[^"]*"/, `class="icon${className ? ` ${className}` : ''}" aria-hidden="true" focusable="false"`);
+---
+
+<Fragment set:html={svg} />
