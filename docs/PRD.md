@@ -2,9 +2,12 @@
 
 | | |
 |---|---|
-| **Status** | Draft v0.2 |
+| **Status** | Draft v0.3 |
 | **Owner** | Alberta Construction LLC |
-| **Based in** | North Portland, OR 97217 |
+| **Based in** | North Portland, OR 97217 (N Alberta St) |
+| **Phone** | (971) 409-6661 |
+| **Email** | wjshambaughjr@gmail.com |
+| **Oregon CCB #** | 261415 |
 | **Serves** | Greater Portland metro area |
 | **Last updated** | 2026-09-23 |
 
@@ -47,41 +50,72 @@ This project is a small, fast, mobile-first marketing website that turns local v
 
 - **Voice:** friendly, plain-spoken, honest, no hype. Write like the owner talks: a neighbor who's good with tools.
 - **Key messages:**
-  - Licensed & Insured (with Oregon CCB number)
+  - Licensed & Insured, Oregon CCB #261415
   - Many years of experience
   - Honest, upfront pricing
   - Hard-working and reliable: shows up on time, does the job, cleans up
-  - Local: based in North Portland
+  - Local: based on N Alberta Street in North Portland
+- **Name story:** the business is named after **Alberta Street**, where the owner lives, right on the North/Northeast Portland line near the Alberta Arts District. This goes on the About page and gives the brand real local roots.
 - **Tagline ideas** (pick one or write your own):
   - "Honest work. Fair price. Done right."
-  - "North Portland's hard-working handyman."
+  - "Your neighbor on Alberta Street, handy since day one."
   - "Licensed, insured, and actually shows up."
 - The phrase "not a leg humper" is **not** used on the site. Its meaning (hard-working, not lazy, gets the job done) is carried by the reliability message above.
 
 ## 5. Design Direction
 
-### 5.1 References
-- **[Neil Kelly](https://www.neilkelly.com/)** (Portland design-build remodeler): the overall look and feel. Refined and trustworthy, warm and earthy, lots of white space, confident typography, and a craftsman quality that feels established rather than "cheap handyman".
-- **[My Handyman LA](https://myhandymanla.com/)**: the structure. It works with **few or no job photos**, relying on clear service listings, icons, and strong calls to action. This is what we need for v1.
+### 5.1 What we took from the references
+Both sites were reviewed from live screenshots (desktop, 2026-09-23).
 
-> Note: the build environment couldn't load these two sites, so the notes above come from general knowledge of them. Before design mockups, we'll check the reference sites against the mockup.
+**[Neil Kelly](https://www.neilkelly.com/): overall look and feel**
+- Crisp **white** backgrounds with **near-black** text (`#111`) and **one strong accent color** (their red, `#D9281E`) used sparingly for links, numbers, and highlights.
+- **Big, heavy, ALL-CAPS sans-serif headlines** (Inter, weight 800, ~50px), e.g. "THE EASIEST WAY TO REMODEL, HONESTLY." This is confident and modern.
+- A **serif wordmark logo** ("Neil Kelly") that contrasts with the heavy sans headlines.
+- Slim **black top utility bar** above the main nav; a **phone icon + "Get Started" button** at the top right.
+- **Trust stats line** under the hero: "80 Years · 30,000+ Projects · 5 Year Warranty · 4.6/5 from 2,200+ reviews".
+- **Numbered process list** (01–05, numbers in the accent color): "Ideas → Design → Review → Get The Job Done → Love Your Space, Guaranteed".
+- **Dark charcoal stats band** with big numbers and small uppercase labels.
+- Service cards: title, one-line description, small accent-colored **→** arrow link.
+- Copy tone: straight talk, "honestly", no fluff. This matches Alberta Construction well.
 
-### 5.2 Visual system
-- **Palette (earthy, Pacific Northwest):**
-  - Primary: deep forest/evergreen green (e.g., `#2F4A3A`)
-  - Neutral base: warm off-white/cream (e.g., `#F7F4EE`) and charcoal text (`#232323`)
-  - Accent: warm cedar/rust (e.g., `#B5562B`) for buttons and calls to action
-  - Supporting: muted sage or stone gray for section backgrounds
-- **Typography:** a classic serif for headings (e.g., *Fraunces*, *Playfair Display*, or *Lora*) paired with a clean sans-serif for body text (e.g., *Inter* or *Source Sans*). Body text ≥ 18px.
-- **Layout:** generous white space, wide sections that alternate between cream and green, and a max content width of ~1200px.
+**[My Handyman LA](https://myhandymanla.com/): structure that works without job photos**
+- Accent-colored **top bar** with location, email, and "Same day service".
+- **Phone number is huge** in the header ("For Immediate Help Call") and repeated in a rounded **call button**.
+- **Quote form right in the hero** (name, phone, address → Submit), so visitors don't have to hunt for it.
+- **Checklist-style service lists** (✓ Door & Window Repairs, ✓ Furniture Assembly …) instead of photo cards.
+- **Icon cards** for values (Trusted / Commitment / Knowledge & Experience).
+- Short **accent bar** to the left of each section heading.
+- Sticky "Call" button on mobile.
+- *What we skip:* stock photos of hard hats, "24/7 emergency" claims, cluttered pop-ups, and the rotated vertical text. These make it feel less trustworthy than Neil Kelly.
+
+### 5.2 Our blend
+**Neil Kelly's look + My Handyman LA's layout, with no photos required.**
+
+- **Palette**
+  - Background: white `#FFFFFF` and a light gray section tone `#F3F4F6`
+  - Text: near-black `#111111`; secondary text `#555555`
+  - Dark band / footer: charcoal `#1F1F1F`
+  - **Accent (one color, used sparingly):** proposed **brick red `#B8321F`**, a nod to Portland brick and close to the Neil Kelly feel without copying it. Alternative: safety orange `#E07A1F` (closer to My Handyman LA). Owner to pick.
+- **Typography**
+  - Headlines: **Inter** (or Archivo) **800, ALL CAPS**, tight letter-spacing, 40–56px desktop / 30–36px mobile
+  - Body: Inter 400, 18px, line height 1.6
+  - **Logo:** "Alberta Construction" in a **classic serif** wordmark (e.g., *Libre Caslon* or *Playfair Display*), with "LLC · Handyman Services" in small caps underneath
+- **Components**
+  - Slim charcoal **top bar**: "📍 North Portland · Licensed & Insured · CCB #261415 · ✉ email", with the phone number on the right
+  - **Header:** serif logo · nav · phone icon + number · accent **"Get a Free Quote"** button
+  - **Hero:** heavy all-caps headline on white, e.g. **"HONEST HANDYMAN WORK. DONE RIGHT."**, with a subline and a trust line styled like Neil Kelly's ("Licensed & Insured · CCB #261415 · Free Estimates · North Portland Local"). A **compact quote form** (name, phone, service, Submit) sits on the right, like My Handyman LA.
+  - **Numbered "How it works"** (01–04, accent-colored numbers)
+  - **Service cards:** line icon + title + one line + accent → arrow
+  - **Charcoal band** for the "Why choose us" points or the pricing
+  - Accent bar or small accent numbers for section labels
+  - **Mobile:** sticky bottom bar with **Call** and **Get Quote** buttons
 
 ### 5.3 Visuals without job photos
-Until real job photos exist, the site uses:
-1. **Custom line icons** for each service (fence, deck, paintbrush, shed, chicken, grab bar, etc.) in one consistent style.
-2. **Typography-led hero**: a big serif headline on a solid or subtly textured background (wood grain, blueprint grid, or a topographic pattern) instead of a photo.
-3. **Optional, tasteful Portland imagery**: a licensed, *non-job* photo such as a North Portland street, St. Johns Bridge, or a craftsman house exterior, used as atmosphere. **Never present a stock photo as the business's own work.**
-4. **Simple illustrations** (optional): e.g., a line drawing of a craftsman house with the services around it.
-5. **Owner photo** (strongly recommended): one friendly photo of the owner with their truck or tools does more for trust than any stock image. This can be taken with a phone.
+1. **Consistent line icons** for each service (fence, deck, paint roller, shed, chicken, grab bar, etc.)
+2. **Type-led hero** on white. The big headline is the visual, as it is on Neil Kelly.
+3. **Owner photo** (strongly recommended, phone camera is fine) for About and optionally the hero
+4. Optional atmosphere: a subtle illustration or a licensed photo of an Alberta Street / North Portland scene. **Never use stock photos that look like the business's own work.**
+5. Leave room in the layout for a future hero photo and gallery (Section 9.7).
 
 ## 6. Services
 
@@ -98,14 +132,13 @@ Each service gets a card (icon + 1–2 sentence description) on the Services pag
 
 ## 7. Pricing (on the website)
 
-Show a starting rate with a range, and offer free estimates on bigger jobs. **Do not mention materials billing anywhere on the site.**
+Show the starting rate, the range, and the minimum, and offer free estimates on bigger jobs. **Do not mention materials billing anywhere on the site.**
 
 Suggested copy:
 
-> **Starting at $75/hour.** Most jobs run $75–$150/hr depending on the type of work. Bigger projects like fences, decks, and sheds get a **free written estimate** with a set price, so there are no surprises.
+> **$75–$150/hour, depending on the job. $150 minimum per visit.** Bigger projects like fences, decks, and sheds get a **free written estimate** with a set price, so there are no surprises.
 
 - Don't publish a per-service price list in v1.
-- **Still open:** Is there a minimum charge (e.g., 1-hour minimum) or trip fee for far edges of the metro area? If yes, add one short line; if no, leave it off.
 
 ## 8. Payments
 
@@ -146,14 +179,15 @@ Footer: phone · email · service area · hours · Oregon CCB # · "Licensed & I
 ### 9.1 Global (every page)
 - **Sticky header** with logo, nav, and a **tap-to-call button** always visible on mobile.
 - **"Get a Free Quote"** button in the header (accent color).
-- **Footer:** contact info, "Based in North Portland, serving the Greater Portland area", hours, **Oregon CCB license number**, and "Licensed & Insured".
+- **Footer:** (971) 409-6661 · wjshambaughjr@gmail.com · "Based in North Portland, serving the Greater Portland area" · hours · **Oregon CCB #261415** · "Licensed & Insured".
+- **Privacy:** the home street address (922 N Alberta St) is **not** shown on the site. Show "North Portland, OR 97217" only. The Google Business Profile should also be a service-area business with the address hidden.
 
 ### 9.2 Home
-1. **Hero** (typography-led, no work photo): headline + tagline, trust badges (Licensed & Insured · CCB #XXXXXX · X+ Years Experience · Free Estimates), buttons **Call Now** and **Get a Free Quote**.
+1. **Hero** (typography-led, no work photo): headline + tagline, trust line (Licensed & Insured · CCB #261415 · X+ Years Experience · Free Estimates) and a compact quote form (Section 5.2), buttons **Call Now** and **Get a Free Quote**.
 2. **Featured services:** 6 icon cards linking to Services.
 3. **Why choose us:** 4 points: Honest, upfront pricing · Shows up on time · Licensed & insured · Leaves your place clean.
 4. **How it works** (builds trust in place of a portfolio): ① Call or send a quote request → ② We talk through the job and give you a price → ③ We show up and get it done → ④ Pay easily by card, Zelle, cash, or check.
-5. **Pricing blurb:** see Section 7.
+5. **Pricing blurb** (charcoal band): see Section 7.
 6. **Service area:** "Based in North Portland (97217), serving the Greater Portland metro." List of areas (Section 10) + optional simple map.
 7. **Our promise / guarantee:** e.g., "If something's not right, call us and we'll make it right." (owner to confirm wording)
 8. **FAQ** (4–6 questions): Are you licensed and insured? Do you give free estimates? How do I pay? What areas do you serve? How soon can you start? Is there a job too small?
@@ -181,7 +215,8 @@ Footer: phone · email · service area · hours · Oregon CCB # · "Licensed & I
 | Preferred contact method | call / text / email | optional |
 | Timeline | ASAP / within 2 weeks / within a month / flexible | optional |
 
-- On submit: a confirmation message ("Thanks! We'll get back to you within 1 business day."), an email to the owner (and text if possible), and spam protection (honeypot + Turnstile/hCaptcha).
+- On submit: a confirmation message ("Thanks! We'll get back to you within 1 business day."), an **email to wjshambaughjr@gmail.com**, and spam protection (honeypot + Turnstile/hCaptcha).
+- Next to the form: **"Prefer to talk? Call (971) 409-6661 for a quote."** Phone quotes are welcome.
 - Photos from *customers* help the owner quote remotely. This is different from the portfolio, which the site doesn't have yet.
 
 ### 9.6 Pay Your Invoice
@@ -195,7 +230,7 @@ Build these **ready to switch on** without a redesign:
 
 ## 10. Service Area
 
-**Base:** North Portland, OR 97217 (Arbor Lodge, Kenton, Overlook, Piedmont, Humboldt area)
+**Base:** N Alberta St, North Portland, OR 97217 (on the North/Northeast line, near the Alberta Arts District)
 
 **Service area (Greater Portland metro):**
 - **Portland:** North, Northeast, Southeast, Southwest, Northwest (St. Johns, Kenton, Arbor Lodge, Overlook, University Park, Alberta Arts, Irvington, Hollywood, Sellwood, Hawthorne, etc.)
@@ -204,7 +239,7 @@ Build these **ready to switch on** without a redesign:
 - **East:** Gresham, Troutdale, Fairview
 - **Washington side (Vancouver, Camas):** ⚠️ only if the owner is also registered as a contractor in **Washington** (WA L&I). An Oregon CCB license does not cover work in WA. Leave it off the site until confirmed.
 
-> Fun fit: the name "Alberta" matches Portland's well-known Alberta Street / Alberta Arts District in NE Portland. It's worth mentioning on the About page if that's where the name comes from.
+> The name comes from Alberta Street, where the owner lives. Mention it on the About page and in local SEO copy ("your neighbor on Alberta Street").
 
 ## 11. Functional Requirements
 
@@ -215,7 +250,7 @@ Build these **ready to switch on** without a redesign:
 | F3 | Quote request form with email notification to owner | Must |
 | F4 | Photo uploads on quote form | Should |
 | F5 | Pay Your Invoice page with Square link + Zelle/check/cash info | Must |
-| F6 | Oregon CCB license number shown on every page (footer) | Must |
+| F6 | Oregon CCB #261415 shown on every page (top bar + footer) | Must |
 | F7 | "How it works", FAQ, and guarantee sections on home page | Must |
 | F8 | Gallery and reviews components built but hidden until content exists | Should |
 | F9 | Owner can add photos/reviews/edit text without code (content files or simple CMS) | Should |
@@ -231,7 +266,7 @@ Build these **ready to switch on** without a redesign:
   - `HomeAndConstructionBusiness` schema: name, phone, address/area served (Portland metro), hours.
   - Sitemap.xml and robots.txt.
   - **Google Business Profile** (to be created, see Section 14). Set it up as a service-area business so the home address stays hidden.
-- **Legal/compliance:** Oregon requires the **CCB license number in all advertising**, including the website. It goes in the footer and on the About page.
+- **Legal/compliance:** Oregon requires the **CCB license number in all advertising**, including the website. **CCB #261415** goes in the top bar, footer, and About page.
 - **Security:** HTTPS, form spam protection, no card data stored on the site (payments go through Square).
 - **Hosting:** static site on Netlify or Cloudflare Pages (free tier) + custom domain (~$12/yr).
 - **Analytics:** privacy-friendly (Plausible or GA4) tracking calls, form submissions, and Pay clicks.
@@ -240,8 +275,8 @@ Build these **ready to switch on** without a redesign:
 
 - **Framework:** Astro (static, fast, cheap to host)
 - **Styling:** Tailwind CSS or custom CSS using the Section 5.2 palette
+- **Fonts:** Inter (headlines/body) + Libre Caslon or Playfair Display (logo wordmark) via Google Fonts
 - **Icons:** a consistent line-icon set (e.g., Lucide/Phosphor) plus a few custom icons (chicken coop, fence, grab bar)
-- **Fonts:** Google Fonts (serif heading + sans body)
 - **Forms:** Netlify Forms or Formspree
 - **Content:** Markdown/JSON files for services, FAQ, and future gallery/reviews. Decap CMS is optional.
 - **Payments:** Square payment link (external)
@@ -249,20 +284,26 @@ Build these **ready to switch on** without a redesign:
 
 ## 14. Content & Setup Checklist (owner)
 
-**Needed for launch**
-- [ ] Business phone number and email
+**Received ✅**
+- [x] Phone: (971) 409-6661
+- [x] Email: wjshambaughjr@gmail.com (quote requests go here; phone quotes also welcome)
+- [x] Oregon CCB #261415
+- [x] Minimum charge: $150
+- [x] Name story: Alberta Street
+- [x] Service area: Greater Portland metro
+
+**Still needed for launch**
 - [ ] Business hours
-- [ ] **Oregon CCB license number** and insurance confirmation
 - [ ] Years of experience
-- [ ] Short bio (a few sentences is fine) + owner photo (recommended)
-- [ ] Logo (or we make a simple text logo)
+- [ ] Short bio (a few sentences) + owner photo (recommended)
+- [ ] Accent color pick: brick red or safety orange (Section 5.2)
+- [ ] Logo (or we use the serif text wordmark from Section 5.2)
 - [ ] Square payment link + Zelle info (Section 8)
-- [ ] Minimum charge / trip fee answer (Section 7)
 - [ ] Guarantee wording (Section 9.2)
 - [ ] Domain name preference (e.g., `albertaconstructionpdx.com`)
 
 **Right after launch**
-- [ ] Create a **Google Business Profile** (service-area business, North Portland, link to the website)
+- [ ] Create a **Google Business Profile** (service-area business, address hidden, link to the website)
 - [ ] Ask the first 5–10 happy customers for Google reviews
 - [ ] Take before/after photos on every job for the future gallery
 - [ ] Optional: Nextdoor business page (popular for Portland handyman referrals), Yelp, Facebook
@@ -280,9 +321,8 @@ Build these **ready to switch on** without a redesign:
 
 ## 16. Open Questions
 
-1. Minimum charge or trip fee? (Section 7)
-2. Is "Alberta" named after the Alberta Arts District / Alberta Street, or something else? (for the About story)
+1. Accent color: brick red `#B8321F` or safety orange `#E07A1F`?
+2. Business hours and years of experience?
 3. Registered to work in Washington (Vancouver)? (Section 10)
 4. Any jobs you **don't** want to advertise, e.g. demolition size limits?
-5. Should quote requests go to email, text, or both?
-6. Guarantee wording you're comfortable with?
+5. Guarantee wording you're comfortable with?
