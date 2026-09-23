@@ -2,20 +2,22 @@
 
 | | |
 |---|---|
-| **Status** | Draft v0.3 |
+| **Status** | Draft v0.4 |
 | **Owner** | Alberta Construction LLC |
 | **Based in** | North Portland, OR 97217 (N Alberta St) |
 | **Phone** | (971) 409-6661 |
 | **Email** | wjshambaughjr@gmail.com |
 | **Oregon CCB #** | 261415 |
-| **Serves** | Greater Portland metro area |
+| **Serves** | Greater Portland metro area (Oregon side only) |
+| **Hours** | Monday–Friday, 9am–5pm |
+| **Experience** | 30+ years |
 | **Last updated** | 2026-09-23 |
 
 ---
 
 ## 1. Overview
 
-Alberta Construction LLC is a licensed and insured handyman and light-construction business in North Portland. The owner is friendly, honest, has many years of experience, and shows up and does the work. The business is new online: no website, no Google Business Profile, no online reviews, and no job photos yet.
+Alberta Construction LLC is a licensed and insured handyman and light-construction business in North Portland. The owner is a friendly, honest dad in a family of four with 30+ years of experience, and shows up and does the work. The business is new online: no website, no Google Business Profile, no online reviews, and no job photos yet.
 
 This project is a small, fast, mobile-first marketing website that turns local visitors into booked jobs and makes getting paid quick and easy. **Because there are no job photos or reviews yet, v1 has to earn trust through strong design, clear copy, credentials, and a clear process instead of a portfolio.** Photos and reviews get added once they exist (Section 9.7).
 
@@ -51,10 +53,18 @@ This project is a small, fast, mobile-first marketing website that turns local v
 - **Voice:** friendly, plain-spoken, honest, no hype. Write like the owner talks: a neighbor who's good with tools.
 - **Key messages:**
   - Licensed & Insured, Oregon CCB #261415
-  - Many years of experience
+  - 30+ years of experience
   - Honest, upfront pricing
   - Hard-working and reliable: shows up on time, does the job, cleans up
   - Local: based on N Alberta Street in North Portland
+- **The problem we solve (lead with this in the copy):** the biggest frustration with contractors is *"I don't know what's happening, what it's going to cost, or whether they're actually on top of it."* Every section of the site should answer one of those three worries:
+
+  | Customer worry | Our answer | Where it shows up |
+  |---|---|---|
+  | "I don't know what's happening." | **You'll always know.** I pick up the phone, return calls and texts the same business day, and tell you when I'm coming, what I'm doing, and when it'll be done. | Hero subline, How it works, About, FAQ |
+  | "I don't know what it'll cost." | **No hidden costs.** Hourly rate and minimum posted right on the site. Bigger jobs get a written price before any work starts. | Pricing band, How it works step 02, FAQ |
+  | "Are they actually on top of it?" | **Show up, get it done.** 30+ years of experience, on time, finished when promised, and I clean up before I leave. | Why choose us, trust line, About |
+
 - **Name story:** the business is named after **Alberta Street**, where the owner lives, right on the North/Northeast Portland line near the Alberta Arts District. This goes on the About page and gives the brand real local roots.
 - **Tagline ideas** (pick one or write your own):
   - "Honest work. Fair price. Done right."
@@ -88,22 +98,22 @@ Both sites were reviewed from live screenshots (desktop, 2026-09-23).
 - Sticky "Call" button on mobile.
 - *What we skip:* stock photos of hard hats, "24/7 emergency" claims, cluttered pop-ups, and the rotated vertical text. These make it feel less trustworthy than Neil Kelly.
 
-### 5.2 Our blend
+### 5.2 Our blend (accent color decided: brick red)
 **Neil Kelly's look + My Handyman LA's layout, with no photos required.**
 
 - **Palette**
   - Background: white `#FFFFFF` and a light gray section tone `#F3F4F6`
   - Text: near-black `#111111`; secondary text `#555555`
   - Dark band / footer: charcoal `#1F1F1F`
-  - **Accent (one color, used sparingly):** proposed **brick red `#B8321F`**, a nod to Portland brick and close to the Neil Kelly feel without copying it. Alternative: safety orange `#E07A1F` (closer to My Handyman LA). Owner to pick.
+  - **Accent (one color, used sparingly): brick red `#B8321F`** ✅ chosen by owner. It's a nod to Portland brick and close to the Neil Kelly feel without copying it. Hover/darker state `#962817`. Check contrast: white text on `#B8321F` passes AA for button text.
 - **Typography**
   - Headlines: **Inter** (or Archivo) **800, ALL CAPS**, tight letter-spacing, 40–56px desktop / 30–36px mobile
   - Body: Inter 400, 18px, line height 1.6
   - **Logo:** "Alberta Construction" in a **classic serif** wordmark (e.g., *Libre Caslon* or *Playfair Display*), with "LLC · Handyman Services" in small caps underneath
 - **Components**
-  - Slim charcoal **top bar**: "📍 North Portland · Licensed & Insured · CCB #261415 · ✉ email", with the phone number on the right
+  - Slim charcoal **top bar**: "📍 North Portland · Mon–Fri 9–5 · Licensed & Insured · CCB #261415", with the phone number on the right
   - **Header:** serif logo · nav · phone icon + number · accent **"Get a Free Quote"** button
-  - **Hero:** heavy all-caps headline on white, e.g. **"HONEST HANDYMAN WORK. DONE RIGHT."**, with a subline and a trust line styled like Neil Kelly's ("Licensed & Insured · CCB #261415 · Free Estimates · North Portland Local"). A **compact quote form** (name, phone, service, Submit) sits on the right, like My Handyman LA.
+  - **Hero:** heavy all-caps headline on white, e.g. **"HONEST HANDYMAN WORK. DONE RIGHT."**, with the subline **"You'll know what's happening, what it costs, and when it'll be done."** and a trust line styled like Neil Kelly's ("30+ Years Experience · Licensed & Insured · CCB #261415 · No Hidden Costs"). A **compact quote form** (name, phone, service, Submit) sits on the right, like My Handyman LA.
   - **Numbered "How it works"** (01–04, accent-colored numbers)
   - **Service cards:** line icon + title + one line + accent → arrow
   - **Charcoal band** for the "Why choose us" points or the pricing
@@ -179,18 +189,26 @@ Footer: phone · email · service area · hours · Oregon CCB # · "Licensed & I
 ### 9.1 Global (every page)
 - **Sticky header** with logo, nav, and a **tap-to-call button** always visible on mobile.
 - **"Get a Free Quote"** button in the header (accent color).
-- **Footer:** (971) 409-6661 · wjshambaughjr@gmail.com · "Based in North Portland, serving the Greater Portland area" · hours · **Oregon CCB #261415** · "Licensed & Insured".
+- **Footer:** (971) 409-6661 · wjshambaughjr@gmail.com · "Based in North Portland, serving the Greater Portland area" · Mon–Fri 9am–5pm · **Oregon CCB #261415** · "Licensed & Insured".
 - **Privacy:** the home street address is **not** shown on the site. Show "North Portland, OR 97217" only. The Google Business Profile should also be a service-area business with the address hidden.
 
 ### 9.2 Home
-1. **Hero** (typography-led, no work photo): headline + tagline, trust line (Licensed & Insured · CCB #261415 · X+ Years Experience · Free Estimates) and a compact quote form (Section 5.2), buttons **Call Now** and **Get a Free Quote**.
+1. **Hero** (typography-led, no work photo): headline + tagline, trust line (30+ Years Experience · Licensed & Insured · CCB #261415 · No Hidden Costs) and a compact quote form (Section 5.2), buttons **Call Now** and **Get a Free Quote**.
 2. **Featured services:** 6 icon cards linking to Services.
-3. **Why choose us:** 4 points: Honest, upfront pricing · Shows up on time · Licensed & insured · Leaves your place clean.
-4. **How it works** (builds trust in place of a portfolio): ① Call or send a quote request → ② We talk through the job and give you a price → ③ We show up and get it done → ④ Pay easily by card, Zelle, cash, or check.
+3. **Why choose us** (answers the three worries from Section 4):
+   - **You'll always know what's going on.** Calls and texts returned the same business day, and updates as the job moves along.
+   - **No hidden costs.** Posted rates and a written price on bigger jobs before work starts.
+   - **Shows up and finishes.** On time, done when promised, 30+ years of doing it right.
+   - **Neat and tidy.** Your home is treated like my own, and I clean up before I leave.
+4. **How it works** (numbered 01–04, builds trust in place of a portfolio):
+   - **01 Reach out.** Call (971) 409-6661 or send a quote request. You'll hear back the same business day.
+   - **02 Know the price.** We talk through the job and you get a clear price up front, in writing for bigger projects. No surprises.
+   - **03 Stay in the loop.** I show up when I say I will, and you'll know what's happening each step of the way.
+   - **04 Done right, cleaned up.** The job gets finished on time, the area gets cleaned, and you pay easily by card, Zelle, cash, or check.
 5. **Pricing blurb** (charcoal band): see Section 7.
 6. **Service area:** "Based in North Portland (97217), serving the Greater Portland metro." List of areas (Section 10) + optional simple map.
-7. **Our promise / guarantee:** e.g., "If something's not right, call us and we'll make it right." (owner to confirm wording)
-8. **FAQ** (4–6 questions): Are you licensed and insured? Do you give free estimates? How do I pay? What areas do you serve? How soon can you start? Is there a job too small?
+7. **Our promise** (draft, owner to confirm): *"If something I did isn't right, call me and I'll come back and make it right."*
+8. **FAQ** (4–6 questions): Are you licensed and insured? (Yes, CCB #261415.) How much will it cost? (Rates, $150 minimum, written price on bigger jobs.) Will I know what's going on? (Yes, same-day replies and updates.) How do I pay? What areas do you serve? (Greater Portland, Oregon side.) What are your hours? (Mon–Fri, 9–5.)
 9. **Final call to action:** "Ready to get it done?" → Call / Quote.
 
 ### 9.3 Services
@@ -198,9 +216,21 @@ Footer: phone · email · service area · hours · Oregon CCB # · "Licensed & I
 - Each: icon, name, 1–2 sentence description, and a "Request a quote" link that pre-fills the form.
 
 ### 9.4 About
-- Owner photo (recommended) and short story: background, years in the trade, why they started the business, and that they're a North Portland local.
-- Values: honesty, reliability, quality work, respect for your home.
-- License (CCB #) and insurance details.
+- Owner photo (recommended), the story below, values, and license (CCB #261415) and insurance details.
+- **Draft About copy** (first person, owner to review; `[Name]` to fill in):
+
+> **Hi, I'm [Name].**
+>
+> I'm a dad, part of a family of four, and I've been fixing, building, and finishing projects for more than 30 years. Alberta Construction is named after Alberta Street, where my family lives, so when I work in your home, I'm working for a neighbor.
+>
+> I started this business because too many people have been let down by contractors. You don't know when they're showing up, you don't know what the bill will be, and you're never sure anyone's really on top of it. I do it differently:
+>
+> - **You'll know what's happening.** I answer my phone, return calls and texts, and keep you updated from the first visit to the final walkthrough.
+> - **You'll know what it costs.** My rates are right here on the website. Bigger jobs get a written price before I start. No hidden costs, ever.
+> - **I show up, and I finish.** When I say I'll be there, I'm there. Jobs get done completely and on time.
+> - **I leave it clean.** I treat your home like it's my own and clean up before I go.
+>
+> I'm licensed and insured (Oregon CCB #261415), and I'd be glad to help with your next project, big or small. Give me a call at (971) 409-6661.
 
 ### 9.5 Get a Free Quote (form)
 | Field | Type | Required |
@@ -237,7 +267,7 @@ Build these **ready to switch on** without a redesign:
 - **Westside:** Beaverton, Hillsboro, Tigard, Tualatin, Sherwood
 - **South:** Lake Oswego, West Linn, Milwaukie, Oregon City, Happy Valley, Clackamas
 - **East:** Gresham, Troutdale, Fairview
-- **Washington side (Vancouver, Camas):** ⚠️ only if the owner is also registered as a contractor in **Washington** (WA L&I). An Oregon CCB license does not cover work in WA. Leave it off the site until confirmed.
+- **Washington (Vancouver, Camas, etc.): not served.** The owner is not registered with WA L&I, and an Oregon CCB license does not cover work in Washington. The site says "Greater Portland, Oregon side." If a Washington lead comes in, politely decline it.
 
 > The name comes from Alberta Street, where the owner lives. Mention it on the About page and in local SEO copy ("your neighbor on Alberta Street").
 
@@ -251,6 +281,7 @@ Build these **ready to switch on** without a redesign:
 | F4 | Photo uploads on quote form | Should |
 | F5 | Pay Your Invoice page with Square link + Zelle/check/cash info | Must |
 | F6 | Oregon CCB #261415 shown on every page (top bar + footer) | Must |
+| F12 | Business hours (Mon–Fri 9–5) in top bar, footer, and schema markup | Must |
 | F7 | "How it works", FAQ, and guarantee sections on home page | Must |
 | F8 | Gallery and reviews components built but hidden until content exists | Should |
 | F9 | Owner can add photos/reviews/edit text without code (content files or simple CMS) | Should |
@@ -290,16 +321,18 @@ Build these **ready to switch on** without a redesign:
 - [x] Oregon CCB #261415
 - [x] Minimum charge: $150
 - [x] Name story: Alberta Street
-- [x] Service area: Greater Portland metro
+- [x] Service area: Greater Portland metro, Oregon side only (not registered in WA)
+- [x] Hours: Mon–Fri, 9am–5pm
+- [x] Experience: 30+ years
+- [x] Accent color: brick red
+- [x] Bio points (turned into the About copy in Section 9.4)
 
 **Still needed for launch**
-- [ ] Business hours
-- [ ] Years of experience
-- [ ] Short bio (a few sentences) + owner photo (recommended)
-- [ ] Accent color pick: brick red or safety orange (Section 5.2)
+- [ ] Owner's first name for the About page
+- [ ] Owner photo (recommended)
+- [ ] Approve the About copy (Section 9.4) and promise wording (Section 9.2)
 - [ ] Logo (or we use the serif text wordmark from Section 5.2)
 - [ ] Square payment link + Zelle info (Section 8)
-- [ ] Guarantee wording (Section 9.2)
 - [ ] Domain name preference (e.g., `albertaconstructionpdx.com`)
 
 **Right after launch**
@@ -321,8 +354,6 @@ Build these **ready to switch on** without a redesign:
 
 ## 16. Open Questions
 
-1. Accent color: brick red `#B8321F` or safety orange `#E07A1F`?
-2. Business hours and years of experience?
-3. Registered to work in Washington (Vancouver)? (Section 10)
-4. Any jobs you **don't** want to advertise, e.g. demolition size limits?
-5. Guarantee wording you're comfortable with?
+1. Owner's first name for the About page (and is first-person "I" OK, or prefer "we")?
+2. OK with the promise wording: "If something I did isn't right, call me and I'll come back and make it right"?
+3. Any jobs you **don't** want to advertise, e.g. demolition size limits?
