@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Status** | Draft v0.4 |
-| **Owner** | Alberta Construction LLC |
+| **Status** | v1.0, ready to build |
+| **Owner** | Bill, Alberta Construction LLC |
 | **Based in** | North Portland, OR 97217 (N Alberta St) |
 | **Phone** | (971) 409-6661 |
 | **Email** | wjshambaughjr@gmail.com |
@@ -207,9 +207,8 @@ Footer: phone · email · service area · hours · Oregon CCB # · "Licensed & I
    - **04 Done right, cleaned up.** The job gets finished on time, the area gets cleaned, and you pay easily by card, Zelle, cash, or check.
 5. **Pricing blurb** (charcoal band): see Section 7.
 6. **Service area:** "Based in North Portland (97217), serving the Greater Portland metro." List of areas (Section 10) + optional simple map.
-7. **Our promise** (draft, owner to confirm): *"If something I did isn't right, call me and I'll come back and make it right."*
-8. **FAQ** (4–6 questions): Are you licensed and insured? (Yes, CCB #261415.) How much will it cost? (Rates, $150 minimum, written price on bigger jobs.) Will I know what's going on? (Yes, same-day replies and updates.) How do I pay? What areas do you serve? (Greater Portland, Oregon side.) What are your hours? (Mon–Fri, 9–5.)
-9. **Final call to action:** "Ready to get it done?" → Call / Quote.
+7. **FAQ** (4–6 questions): Are you licensed and insured? (Yes, CCB #261415.) How much will it cost? (Rates, $150 minimum, written price on bigger jobs.) Will I know what's going on? (Yes, same-day replies and updates.) How do I pay? What areas do you serve? (Greater Portland, Oregon side.) What are your hours? (Mon–Fri, 9–5.) What if something isn't right after the job? ("Call me and I'll come back and make it right." This is a low-key FAQ answer, not a big guarantee banner.)
+8. **Final call to action:** "Ready to get it done?" → Call / Quote.
 
 ### 9.3 Services
 - All 14 services grouped by category (Section 6).
@@ -217,9 +216,9 @@ Footer: phone · email · service area · hours · Oregon CCB # · "Licensed & I
 
 ### 9.4 About
 - Owner photo (recommended), the story below, values, and license (CCB #261415) and insurance details.
-- **Draft About copy** (first person, owner to review; `[Name]` to fill in):
+- **About copy** (first person, approved):
 
-> **Hi, I'm [Name].**
+> **Hi, I'm Bill.**
 >
 > I'm a dad, part of a family of four, and I've been fixing, building, and finishing projects for more than 30 years. Alberta Construction is named after Alberta Street, where my family lives, so when I work in your home, I'm working for a neighbor.
 >
@@ -282,7 +281,7 @@ Build these **ready to switch on** without a redesign:
 | F5 | Pay Your Invoice page with Square link + Zelle/check/cash info | Must |
 | F6 | Oregon CCB #261415 shown on every page (top bar + footer) | Must |
 | F12 | Business hours (Mon–Fri 9–5) in top bar, footer, and schema markup | Must |
-| F7 | "How it works", FAQ, and guarantee sections on home page | Must |
+| F7 | "How it works" and FAQ sections on home page | Must |
 | F8 | Gallery and reviews components built but hidden until content exists | Should |
 | F9 | Owner can add photos/reviews/edit text without code (content files or simple CMS) | Should |
 | F10 | Pre-fill the service in the quote form from a service card | Could |
@@ -326,11 +325,11 @@ Build these **ready to switch on** without a redesign:
 - [x] Experience: 30+ years
 - [x] Accent color: brick red
 - [x] Bio points (turned into the About copy in Section 9.4)
+- [x] Owner name: Bill; About copy and "same business day" reply promise approved
+- [x] No services excluded from advertising
 
 **Still needed for launch**
-- [ ] Owner's first name for the About page
 - [ ] Owner photo (recommended)
-- [ ] Approve the About copy (Section 9.4) and promise wording (Section 9.2)
 - [ ] Logo (or we use the serif text wordmark from Section 5.2)
 - [ ] Square payment link + Zelle info (Section 8)
 - [ ] Domain name preference (e.g., `albertaconstructionpdx.com`)
@@ -354,6 +353,4 @@ Build these **ready to switch on** without a redesign:
 
 ## 16. Open Questions
 
-1. Owner's first name for the About page (and is first-person "I" OK, or prefer "we")?
-2. OK with the promise wording: "If something I did isn't right, call me and I'll come back and make it right"?
-3. Any jobs you **don't** want to advertise, e.g. demolition size limits?
+None blocking the build. Placeholders are used for the owner photo, logo, Square payment link, Zelle details, and domain until they're ready (Section 14).
