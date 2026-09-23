@@ -180,7 +180,7 @@ Footer: phone · email · service area · hours · Oregon CCB # · "Licensed & I
 - **Sticky header** with logo, nav, and a **tap-to-call button** always visible on mobile.
 - **"Get a Free Quote"** button in the header (accent color).
 - **Footer:** (971) 409-6661 · wjshambaughjr@gmail.com · "Based in North Portland, serving the Greater Portland area" · hours · **Oregon CCB #261415** · "Licensed & Insured".
-- **Privacy:** the home street address (922 N Alberta St) is **not** shown on the site. Show "North Portland, OR 97217" only. The Google Business Profile should also be a service-area business with the address hidden.
+- **Privacy:** the home street address is **not** shown on the site. Show "North Portland, OR 97217" only. The Google Business Profile should also be a service-area business with the address hidden.
 
 ### 9.2 Home
 1. **Hero** (typography-led, no work photo): headline + tagline, trust line (Licensed & Insured · CCB #261415 · X+ Years Experience · Free Estimates) and a compact quote form (Section 5.2), buttons **Call Now** and **Get a Free Quote**.
