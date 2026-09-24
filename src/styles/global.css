@@ -271,30 +271,51 @@ p {
 
 .logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   color: var(--ink);
   text-decoration: none;
-  line-height: 1.1;
 }
 
 .logo:hover {
   color: var(--ink);
 }
 
-.logo-main {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
+.logo-mark {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 0.95;
   letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 
 .logo-sub {
-  margin-top: 4px;
+  margin-top: 5px;
   color: var(--brick);
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+.logo-dark,
+.logo-dark:hover {
+  color: var(--white);
+}
+
+.logo-dark .logo-sub {
+  color: var(--brick-light);
 }
 
 .main-nav {
@@ -1243,14 +1264,6 @@ p {
   margin-bottom: 16px;
 }
 
-.logo-footer .logo-main {
-  color: var(--white);
-}
-
-.logo-footer .logo-sub {
-  color: var(--brick-light);
-}
-
 .footer-text {
   font-size: 0.9375rem;
 }
@@ -1350,8 +1363,13 @@ p {
     min-height: 68px;
   }
 
-  .logo-main {
-    font-size: 1.35rem;
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo-name {
+    font-size: 1.1rem;
   }
 
   .hero-grid,

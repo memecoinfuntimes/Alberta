@@ -1,0 +1,25 @@
+---
+// Bold Block logo: brick-red square with a serif "A", name stacked in heavy caps.
+interface Props {
+  tone?: 'light' | 'dark';
+  as?: 'a' | 'div';
+}
+
+const { tone = 'light', as = 'a' } = Astro.props;
+const Tag = as;
+---
+
+<Tag class:list={['logo', `logo-${tone}`]} {...as === 'a' ? { href: '/', 'aria-label': 'Alberta Construction LLC, home' } : {}}>
+  <svg class="logo-mark" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
+    <rect width="72" height="72" fill="#b8321f"></rect>
+    <path
+      transform="translate(15.6 56.5) scale(0.052 -0.052)"
+      fill="#fff"
+      d="M805 37V0H393V37Q449 39 470.0 46.5Q491 54 491 74Q491 90 482 114L442 222H217L188 146Q177 116 177 99Q177 74 202.5 60.0Q228 46 290 37V0H-20V37Q29 45 52.0 55.0Q75 65 88.5 84.5Q102 104 119 148L308 630L262 733L411 790L697 98Q707 74 718.0 62.0Q729 50 748.0 45.0Q767 40 805 37ZM421 279 334 516H330L239 279Z"
+    ></path>
+  </svg>
+  <span class="logo-text">
+    <span class="logo-name">Alberta<br />Construction</span>
+    <span class="logo-sub">LLC · Handyman Services</span>
+  </span>
+</Tag>

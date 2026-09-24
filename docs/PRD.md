@@ -109,7 +109,7 @@ Both sites were reviewed from live screenshots (desktop, 2026-09-23).
 - **Typography**
   - Headlines: **Inter** (or Archivo) **800, ALL CAPS**, tight letter-spacing, 40–56px desktop / 30–36px mobile
   - Body: Inter 400, 18px, line height 1.6
-  - **Logo:** "Alberta Construction" in a **classic serif** wordmark (e.g., *Libre Caslon* or *Playfair Display*), with "LLC · Handyman Services" in small caps underneath
+  - **Logo (chosen): "Bold Block".** A brick-red square with a white serif **A** (Libre Caslon), next to **ALBERTA / CONSTRUCTION** stacked in Inter 900 caps, with "LLC · Handyman Services" in small brick-red caps underneath. The square alone is the icon (favicon, app icon, social avatar). Files are in `/brand`.
 - **Components**
   - Slim charcoal **top bar**: "📍 North Portland · Mon–Fri 9–5 · Licensed & Insured · CCB #261415", with the phone number on the right
   - **Header:** serif logo · nav · phone icon + number · accent **"Get a Free Quote"** button
@@ -327,10 +327,10 @@ Build these **ready to switch on** without a redesign:
 - [x] Bio points (turned into the About copy in Section 9.4)
 - [x] Owner name: Bill; About copy and "same business day" reply promise approved
 - [x] No services excluded from advertising
+- [x] Logo: "Bold Block" (brick-red square with a serif "A", name stacked in heavy caps). Files are in `/brand`
 
 **Still needed for launch**
 - [ ] Owner photo (recommended)
-- [ ] Logo (or we use the serif text wordmark from Section 5.2)
 - [ ] Square payment link + Zelle info (Section 8)
 - [ ] Domain name preference (e.g., `albertaconstructionpdx.com`)
 

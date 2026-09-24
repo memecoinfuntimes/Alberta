@@ -34,6 +34,14 @@ Almost everything lives in **`src/data/site.ts`**:
 | Customer reviews | `reviews` (the section appears automatically once there's at least one) |
 | Job photos | put files in `public/work/`, add them to `workPhotos` (the gallery appears automatically) |
 
+## Logo files
+
+`brand/` has the logo for print and social:
+
+- `alberta-logo-light.png` / `alberta-logo-dark.png`: full logo for white or dark backgrounds
+- `alberta-icon-512.png`: square icon (social profile pictures, Google Business Profile)
+- `alberta-mark.svg`: the "A" square as a vector file (for printers, sign shops, truck decals)
+
 ## Deploying (Netlify)
 
 1. Create a free Netlify account and choose **Add new site → Import an existing project**, then pick this GitHub repo. The build settings come from `netlify.toml`.

@@ -4,6 +4,7 @@ import '@fontsource/libre-caslon-text/400.css';
 import '@fontsource/libre-caslon-text/700.css';
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import Logo from '../components/Logo.astro';
 import { business, serviceArea } from '../data/site';
 
 interface Props {
@@ -66,6 +67,7 @@ const schema = {
     <meta property="og:description" content={description} />
     <meta name="theme-color" content="#1f1f1f" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
@@ -84,10 +86,7 @@ const schema = {
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="/" aria-label={`${business.name}, home`}>
-          <span class="logo-main">Alberta Construction</span>
-          <span class="logo-sub">LLC · Handyman Services</span>
-        </a>
+        <Logo />
 
         <nav class="main-nav" aria-label="Main">
           <ul>
@@ -134,10 +133,7 @@ const schema = {
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <p class="logo logo-footer">
-            <span class="logo-main">Alberta Construction</span>
-            <span class="logo-sub">LLC · Handyman Services</span>
-          </p>
+          <div class="logo-footer"><Logo tone="dark" as="div" /></div>
           <p class="footer-text">
             Honest, dependable handyman work from your neighbor on Alberta Street. {business.yearsExperience} years
             of experience.
