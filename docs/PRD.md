@@ -327,12 +327,12 @@ Build these **ready to switch on** without a redesign:
 - [x] Bio points (turned into the About copy in Section 9.4)
 - [x] Owner name: Bill; About copy and "same business day" reply promise approved
 - [x] No services excluded from advertising
+- [x] Domain: albertaconstructionpdx.com (DNS on Netlify)
 - [x] Logo: "Bold Block" (brick-red square with a serif "A", name stacked in heavy caps). Files are in `/brand`
 
 **Still needed for launch**
 - [ ] Owner photo (recommended)
 - [ ] Square payment link + Zelle info (Section 8)
-- [ ] Domain name preference (e.g., `albertaconstructionpdx.com`)
 
 **Right after launch**
 - [ ] Create a **Google Business Profile** (service-area business, address hidden, link to the website)

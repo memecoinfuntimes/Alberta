@@ -47,4 +47,4 @@ Almost everything lives in **`src/data/site.ts`**:
 1. Create a free Netlify account and choose **Add new site → Import an existing project**, then pick this GitHub repo. The build settings come from `netlify.toml`.
 2. **Forms:** in Netlify → *Forms*, enable form detection. The `quote` and `quick-quote` forms show up after the first deploy.
 3. **Email notifications:** Netlify → *Site configuration → Notifications → Form submission notifications → Email*, and send to `wjshambaughjr@gmail.com`.
-4. **Domain:** add the custom domain in Netlify, then set the environment variable `SITE_URL` (e.g. `https://albertaconstructionpdx.com`) and redeploy. This turns on canonical URLs and `sitemap-index.xml`.
+4. **Domain:** `albertaconstructionpdx.com` (DNS managed by Netlify). It is set in `astro.config.mjs`. Only set a `SITE_URL` environment variable to override it, for example if the domain changes.

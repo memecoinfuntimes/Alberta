@@ -2,11 +2,10 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// Set SITE_URL once the domain is live (e.g. https://albertaconstructionpdx.com).
-// Canonical URLs and sitemap.xml are only generated when it is set.
-const site = process.env.SITE_URL;
+// The live domain. Used for canonical URLs, the sitemap, and search-engine metadata.
+const site = process.env.SITE_URL ?? 'https://albertaconstructionpdx.com';
 
 export default defineConfig({
   site,
-  integrations: site ? [sitemap()] : [],
+  integrations: [sitemap({ filter: (page) => !page.includes('/thanks/') })],
 });
