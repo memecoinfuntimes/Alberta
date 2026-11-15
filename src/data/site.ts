@@ -136,6 +136,23 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
+    name: 'Pictures & Art',
+    services: [
+      {
+        slug: 'picture-hanging',
+        name: 'Picture Hanging',
+        icon: 'image',
+        blurb: 'Photos, prints, and mirrors hung level, at the right height, and anchored to stay put.',
+      },
+      {
+        slug: 'art-installation',
+        name: 'Art Installation',
+        icon: 'ruler',
+        blurb: 'Gallery walls, heavy or oversized pieces, and shelves laid out and mounted securely.',
+      },
+    ],
+  },
+  {
     name: 'Projects & Heavy Work',
     services: [
       {
