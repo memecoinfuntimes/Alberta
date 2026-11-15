@@ -282,9 +282,14 @@ p {
 }
 
 .logo-mark {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   flex-shrink: 0;
+}
+
+.logo-footer .logo-mark {
+  width: 96px;
+  height: 96px;
 }
 
 .logo-text {
@@ -974,6 +979,18 @@ p {
   border-radius: var(--radius);
 }
 
+/* A single photo spans the row instead of sitting in one narrow column. */
+.work-grid figure:only-child {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.work-grid figure:only-child img {
+  aspect-ratio: auto;
+}
+
 .work-grid figcaption {
   margin-top: 8px;
   color: var(--gray-600);
@@ -1364,8 +1381,8 @@ p {
   }
 
   .logo-mark {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
   }
 
   .logo-name {
