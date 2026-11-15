@@ -209,10 +209,4 @@ export const reviews: { quote: string; name: string; area: string }[] = [];
 
 // Add job photos here once you have them (put the files in /public/work/).
 // The "Our Work" section stays hidden while this list is empty.
-export const workPhotos: { src: string; alt: string; caption?: string }[] = [
-  {
-    src: '/work/horizontal-fence-drive-gate.webp',
-    alt: 'New horizontal-board wood privacy fence with a double drive gate on black posts',
-    caption: 'Horizontal-board privacy fence with a double drive gate',
-  },
-];
+export const workPhotos: { src: string; alt: string; caption?: string }[] = [];
